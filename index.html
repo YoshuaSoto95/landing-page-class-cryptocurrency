@@ -30,7 +30,7 @@
             <a class="nav-link" href="#contact">Contact</a>
         </nav>
         <div class="cta-menu">
-            <a href="#pricing">Get Started</a>
+            <a href="#pricing" class="btn open-modal">Get Started</a>
         </div>
         <div class="toogle-btn">
             <i class="fa-solid fa-bars"></i>
@@ -49,7 +49,7 @@
                 decisions, and execute profitable trades from industry experts.
             </p>
             <div class="cta-main">
-                <button class="btn-cta" id="cta-main-btn">Enroll Now</button>
+                <button class="btn-cta open-modal">Enroll Now</button>
             </div>
             <div class="bubbles-social">
                 <a href="#" class="bubbles-link"><i class="fa-brands fa-facebook"></i></a>
@@ -157,7 +157,7 @@
                         <li><i class="fas fa-times"></i> Community Access</li>
                         <li><i class="fas fa-times"></i> 1-on-1 Mentoring</li>
                     </ul>
-                    <a href="#cta" class="btn">Select Plan</a>
+                    <a href="#cta" class="btn open-modal">Select Plan</a>
                 </div>
                 <div class="pricing-card fade-in floating">
                     <h3>Pro</h3>
@@ -169,7 +169,7 @@
                         <li><i class="fas fa-check"></i> Trading Templates</li>
                         <li><i class="fas fa-times"></i> 1-on-1 Mentoring</li>
                     </ul>
-                    <a href="#cta" class="btn">Select Plan</a>
+                    <a href="#cta" class="btn open-modal">Select Plan</a>
                 </div>
                 <div class="pricing-card fade-in floating">
                     <h3>Elite</h3>
@@ -181,7 +181,7 @@
                         <li><i class="fas fa-check"></i> Advanced Strategies</li>
                         <li><i class="fas fa-check"></i> Lifetime Updates</li>
                     </ul>
-                    <a href="#cta" class="btn">Select Plan</a>
+                    <a href="#cta" class="btn open-modal">Select Plan</a>
                 </div>
             </div>
         </div>
@@ -235,7 +235,7 @@
             <h2 class="fade-in">Start Your Crypto Journey Today</h2>
             <p class="fade-in">Join thousands of students who have transformed their trading skills and financial future
                 with our comprehensive course.</p>
-            <a href="#" class="btn-cta fade-in floating">Enroll Now</a>
+            <a href="#" class="btn-cta fade-in floating open-modal">Enroll Now</a>
         </div>
     </section>
 
@@ -276,6 +276,83 @@
             </div>
         </div>
     </footer>
+
+    <!-- Modal Formulario -->
+    <div class="modal" id="formModal">
+        <div class="modal-content">
+            <button class="close-modal" id="closeModal">&times;</button>
+
+            <div class="modal-header">
+                <h2>Register for the Course</h2>
+                <p>Complete the form below to register for the course.</p>
+            </div>
+
+            <div class="modal-progress">
+                <div class="modal-progress-bar" id="progressBar"></div>
+            </div>
+
+            <form id="ticketForm">
+                <div class="form-step active" id="step1">
+                    <div class="form-group">
+                        <label for="name">Full name</label>
+                        <input type="text" id="name" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" class="form-control" required>
+                    </div>
+                    <div class="form-navigation">
+                        <button type="button" class="btn next-step">Next</button>
+                    </div>
+                </div>
+
+                <div class="form-step" id="step2">
+                    <div class="form-group">
+                        <label for="phone">Phone</label>
+                        <input type="tel" id="phone" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="ticketType">Select you Plan</label>
+                        <select id="ticketType" class="form-control" required>
+                            <option value="">Select a Plan</option>
+                            <option value="basic">Basic ($199)</option>
+                            <option value="standard">Pro ($399)</option>
+                            <option value="premium">Elite ($699)</option>
+                        </select>
+                    </div>
+
+                    <div class="form-navigation">
+                        <button type="button" class="btn prev-step">Back</button>
+                        <button type="button" class="btn next-step">Next</button>
+                    </div>
+                </div>
+
+                <div class="form-step" id="step3">
+                    <div class="form-group">
+                        <label for="cardNumber">Number Card</label>
+                        <input type="text" id="cardNumber" class="form-control" placeholder="1234 5678 9012 3456"
+                            required>
+                    </div>
+
+                    <div class="form-navigation">
+                        <button type="button" class="btn prev-step">Back</button>
+                        <button type="submit" class="btn">Complete Registration</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal Thank You -->
+    <div class="modal" id="thankYouModal">
+        <div class="modal-content thank-you-modal">
+            <i class="fas fa-check-circle"></i>
+            <h2>Thanks for your purchase</h2>
+            <p>Your payment has been processed successfully.</p>
+            <p>We will send you a confirmation email shortly.</p>
+            <button class="btn" id="closeThankYou">Close</button>
+        </div>
+    </div>
     <script src="js/script.js"></script>
 </body>
 

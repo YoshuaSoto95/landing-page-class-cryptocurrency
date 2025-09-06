@@ -12,6 +12,7 @@
 :root {
     --light: #fff;
     --black: #000;
+    --primary: #131fc4;
     --light-blue: #167bce;
     --primary-blue: #0e03a0;
     --secondary-blue: #01010e;
@@ -650,4 +651,135 @@ footer {
 .fade-in.visible {
     opacity: 1;
     transform: translateY(0);
+}
+
+/* Modal */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+}
+
+.modal.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-content {
+    background: var(--secondary-blue);
+    border: 1px solid var(--light-blue);
+    width: 90%;
+    max-width: 500px;
+    border-radius: 15px;
+    padding: 30px;
+    position: relative;
+    transform: scale(0.9);
+    transition: transform 0.3s ease;
+}
+
+.modal.active .modal-content {
+    transform: scale(1);
+}
+
+.close-modal {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.modal-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.modal-progress {
+    height: 5px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    margin-bottom: 30px;
+    overflow: hidden;
+}
+
+.modal-progress-bar {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(270deg, var(--primary-blue), var(--light-blue));
+    border-radius: 5px;
+    transition: width 0.5s ease;
+}
+
+.form-step {
+    display: none;
+}
+
+.form-step.active {
+    display: block;
+    animation: fadeIn 0.5s ease;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.form-control {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.05);
+    color: white;
+    transition: var(--transition);
+}
+
+.form-control option {
+    color: var(--secondary-blue);
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: var(--primary);
+    background: rgba(22, 22, 22, 0.014);
+}
+
+.form-navigation {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+/* Thank You Modal */
+.thank-you-modal {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.thank-you-modal i {
+    font-size: 4rem;
+    color: var(--primary);
+    margin-bottom: 20px;
+}
+
+.thank-you-modal h2 {
+    margin-bottom: 15px;
 }
