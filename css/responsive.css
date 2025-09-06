@@ -76,9 +76,9 @@
 
 }
 
-@media (max-width: 400px) {
+@media (max-width: 389px) {
     .hero {
-        padding: 1.5rem 5rem;
-        height: 140vh;
+        padding: 12rem 3rem;
+        height: 160vh;
     }
 }
