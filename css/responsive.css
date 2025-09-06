@@ -1,0 +1,69 @@
+@media (max-width: 1330px) {
+    .program {
+        height: auto;
+        padding: 4rem 2rem
+    }
+
+    .program-content .cards {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 978px) {
+
+    .header,
+    .hero {
+        padding: 1rem 2rem;
+    }
+
+    .header .nav-menu {
+        display: none;
+    }
+
+    .toogle-btn {
+        display: block;
+        color: #fff;
+    }
+
+    .hero .hero-content {
+        text-align: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .cta-main .btn {
+        padding: 1.5rem 8rem;
+    }
+
+    .program-content .cards {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 490px) {
+
+    .header .logo {
+        display: none;
+    }
+
+    .hero {
+        height: 110vh;
+    }
+
+    .header .mini-logo {
+        display: block;
+    }
+
+    .program-content .cards .card {
+        height: auto;
+    }
+
+    .bubbles-social {
+        margin-bottom: 3rem;
+    }
+
+}
