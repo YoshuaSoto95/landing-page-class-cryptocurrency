@@ -37,10 +37,11 @@
         padding: 1.5rem 8rem;
     }
 
-    .program-content .cards {
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-        gap: 1rem;
+    .program,
+    .benefits,
+    .pricing,
+    .testimonials {
+        background-attachment: scroll;
     }
 }
 
@@ -52,6 +53,7 @@
 
     .hero {
         height: 110vh;
+        padding: 2rem;
     }
 
     .header .mini-logo {
@@ -66,4 +68,17 @@
         margin-bottom: 3rem;
     }
 
+    .program-card,
+    .pricing-card,
+    .testimonial-card {
+        padding: 20px;
+    }
+
+}
+
+@media (max-width: 400px) {
+    .hero {
+        padding: 1.5rem 5rem;
+        height: 140vh;
+    }
 }

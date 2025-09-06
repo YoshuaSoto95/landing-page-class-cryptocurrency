@@ -149,6 +149,7 @@ a:hover {
 
 .header .mini-logo {
     display: none;
+    margin-top: 15px;
     color: var(--light);
     font-size: 1.1rem;
     cursor: pointer;
@@ -272,7 +273,7 @@ a:hover {
     margin-bottom: 1.5rem;
 }
 
-.cta-main .btn {
+.cta-main .btn-cta {
     background: linear-gradient(270deg, var(--secondary-blue), var(--primary-blue), var(--light-blue));
     background-size: 200% 200%;
     padding: 1rem 6rem;
@@ -287,7 +288,7 @@ a:hover {
     border: none;
 }
 
-.cta-main .btn:hover {
+.cta-main .btn-cta:hover {
     animation: none;
     background-color: var(--light-blue);
     color: var(--light);
@@ -433,11 +434,34 @@ a:hover {
     color: #3b82f6;
 }
 
+.pricing-card .btn-price {
+    background: linear-gradient(270deg, var(--secondary-blue), var(--primary-blue), var(--light-blue));
+    background-size: 200% 200%;
+    padding: 1rem 6rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+    border-radius: 0.5rem;
+    color: var(--light);
+    text-decoration: none;
+    transition: all 0.4s ease-in-out;
+    animation: cta-effect 2s ease infinite;
+    cursor: pointer;
+    border: none;
+}
+
+.pricing-card .btn-price:hover {
+    animation: none;
+    background-color: var(--light-blue);
+    color: var(--light);
+    transform: scale(1.1);
+    transition: all 0.4s ease-in-out;
+}
+
 .price {
     font-size: 48px;
     font-weight: 700;
     margin: 20px 0;
-    color: #4cc2ff;
+    color: var(--light);
     text-shadow: 0 0 15px rgba(76, 194, 255, 0.5);
 }
 
@@ -527,6 +551,29 @@ a:hover {
     max-width: 700px;
     margin: 0 auto 40px;
     color: #cbd5e1;
+}
+
+.cta .btn-cta {
+    background: linear-gradient(270deg, var(--secondary-blue), var(--primary-blue), var(--light-blue));
+    background-size: 200% 200%;
+    padding: 1rem 6rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+    border-radius: 0.5rem;
+    color: var(--light);
+    text-decoration: none;
+    transition: all 0.4s ease-in-out;
+    animation: cta-effect 2s ease infinite;
+    cursor: pointer;
+    border: none;
+}
+
+.cta .btn-cta:hover {
+    animation: none;
+    background-color: var(--light-blue);
+    color: var(--light);
+    transform: scale(1.1);
+    transition: all 0.4s ease-in-out;
 }
 
 /* ==== Footer ==== */
